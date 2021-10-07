@@ -10,17 +10,27 @@ public class Ejercicio4 {
     int nro = s.nextInt();
     s.close();
 
-    int resultado = calcularFactorial(nro);
-    System.out.println(String.format("El facotrial de %d es: %d", nro, resultado));
+    int resultado = factorialRecursivo(nro);
+    System.out.println(String.format("El facotrial de %d con recursividad es: %d", nro, resultado));
+
+    int resiltado2 = factorialCiclo(nro);
+    System.out.println(String.format("El factorial de %d con ciclos es: %d", nro, resiltado2));
   }
 
-  private static int calcularFactorial(int nro) {
-    int limite = nro;
+  private static int factorialRecursivo(int nro) {
+    if (nro <= 1)
+      return nro;
+    return nro * factorialRecursivo(nro - 1);
+  }
 
-    for (int i = 1; i <= limite; i++) {
-      nro = nro * i;
+  private static int factorialCiclo(int nro) {
+    int acum = 1;
+
+    for (int i = nro; i >= 1; i--) {
+      acum *= i;
     }
 
-    return nro;
+    return acum;
   }
+
 }
