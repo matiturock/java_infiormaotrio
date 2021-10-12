@@ -10,7 +10,7 @@ public class Ejercicio5 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
 
-    System.out.println("ingresa dos números enteros:");
+    System.out.println("Ingresa dos números enteros:");
     int num1 = s.nextInt();
     int num2 = s.nextInt();
 
