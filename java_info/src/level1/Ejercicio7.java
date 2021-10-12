@@ -19,9 +19,11 @@ public class Ejercicio7 {
   }
 
   private static char charMinuculaAMayuscula(char letra) {
-    // TODO cambiar de min a mayus
-    int num = Character.getNumericValue(letra);
-    letra = (char) (num - 32);
+    // se pregunta si la letra está en el rango de las minúsculas
+    // si es así, se le resta el rango que hay entre 'a' y 'A'
+    // es decir: esntre minúsculas y mayúsculas
+    if (letra >= 'a' || letra <= 'z')
+      letra = (char) (letra - ('a' - 'A'));
 
     return letra;
   }
