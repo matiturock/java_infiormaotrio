@@ -1,6 +1,6 @@
 package level1;
 
-public class Persona {
+class Persona {
   private String nombreYApellido;
   private int edad;
   private String direccion;

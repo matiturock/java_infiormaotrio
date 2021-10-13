@@ -25,10 +25,13 @@ public class Ejercicio5 {
     }
 
     System.out.println("TABLA DE TOTALES A COBRAR");
+    int acumulador = 0;
     for (int i = 0; i < totalACobrar.size(); i++) {
       System.out.println(String.format("Horas: %d\t$ por hora: $%d\tTotal: $%d", horasTrabajadas.get(i),
           valorPorHora.get(i), totalACobrar.get(i)));
+      acumulador += totalACobrar.get(i);
     }
+    System.out.println(String.format("TOTAL: $%d", acumulador));
 
   }
 }

@@ -1,6 +1,6 @@
 package revision1;
 
-public class Empleado {
+class Empleado {
   private String nombre;
   private int edad;
   private boolean estaEnServicio;
