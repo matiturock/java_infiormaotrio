@@ -10,11 +10,11 @@ package level2;
 
 class Empleado {
   private String nombreYApellido;
-  private int dni;
+  private String dni;
   private int horasTrabajadas;
   private int valorPorHora;
 
-  public Empleado(String nombreYApellido, int dni, int horasTrabajadas, int valorPorHora) {
+  public Empleado(String nombreYApellido, String dni, int horasTrabajadas, int valorPorHora) {
     this.nombreYApellido = nombreYApellido;
     this.dni = dni;
     this.horasTrabajadas = horasTrabajadas;
@@ -29,11 +29,11 @@ class Empleado {
     this.nombreYApellido = nombreYApellido;
   }
 
-  public int getDni() {
+  public String getDni() {
     return dni;
   }
 
-  public void setDni(int dni) {
+  public void setDni(String dni) {
     this.dni = dni;
   }
 

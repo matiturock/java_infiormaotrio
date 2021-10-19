@@ -21,38 +21,38 @@ public class Ejercicio6 {
     cargarEmpleados(empleados);
     mostrarEmpleados(empleados);
 
-    Map<Integer, Integer> dniSueldo = new HashMap<>();
+    Map<String, Integer> dniSueldo = new HashMap<>();
     cargarMapaDniSueldo(empleados, dniSueldo);
     mostrarMapaDniSueldo(dniSueldo);
   }
 
-  private static void mostrarMapaDniSueldo(Map<Integer, Integer> dniSueldo) {
-    System.out.println("DNI - SUELDO");
-    for (Entry<Integer, Integer> empleado : dniSueldo.entrySet()) {
-      Integer key = empleado.getKey();
+  private static void mostrarMapaDniSueldo(Map<String, Integer> dniSueldo) {
+    System.out.println("MAP: DNI -> SUELDO");
+    for (Entry<String, Integer> empleado : dniSueldo.entrySet()) {
+      String key = empleado.getKey();
       Integer value = empleado.getValue();
-      System.out.println("DNI: " + key + "\t -> Sueldo: $" + value);
+      System.out.println("DNI: " + key + " -> Sueldo: $" + value);
     }
   }
 
-  private static void cargarMapaDniSueldo(Set<Empleado> empleados, Map<Integer, Integer> dniSueldo) {
+  private static void cargarMapaDniSueldo(Set<Empleado> empleados, Map<String, Integer> dniSueldo) {
     for (Empleado empleado : empleados) {
       dniSueldo.put(empleado.getDni(), (empleado.getHorasTrabajadas() * empleado.getValorPorHora()));
     }
   }
 
   private static void mostrarEmpleados(Set<Empleado> empleados) {
-    System.out.println("SET DE EMPLEADOS");
+    System.out.println("SET EMPLEADOS");
     for (Empleado empleado : empleados) {
       System.out.println("-> " + empleado);
     }
   }
 
   private static void cargarEmpleados(Set<Empleado> empleados) {
-    Empleado emp1 = new Empleado("Matias", 123, 10, 100);
-    Empleado emp2 = new Empleado("Lucianoi", 456, 15, 120);
-    Empleado emp3 = new Empleado("Claudio", 789, 20, 80);
-    Empleado emp4 = new Empleado("Cintia", 012, 16, 50);
+    Empleado emp1 = new Empleado("Matias", "123", 10, 100);
+    Empleado emp2 = new Empleado("Luciano", "456", 15, 120);
+    Empleado emp3 = new Empleado("Claudio", "789", 20, 80);
+    Empleado emp4 = new Empleado("Cintia", "012", 16, 50);
 
     empleados.add(emp1);
     empleados.add(emp2);
