@@ -1,3 +1,11 @@
+/**
+ * Se dispone de una colección de Empleados, de cada empleado se conoce:
+ * - Nombre y Apellido
+ * - DNI
+ * - horasTrabajadas
+ * - valorPorHora
+ */
+
 package level2;
 
 class Empleado {
